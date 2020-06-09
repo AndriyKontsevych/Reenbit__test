@@ -1,0 +1,39 @@
+.contactsBlock {
+    height: 100vh;
+    min-width: 300px;
+    width: 35%;
+    border-right: 1px solid #e0e0e0;
+    overflow-y: scroll;
+  
+    .contactInfo {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0px;
+      padding: 10px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    
+    .contactInfo:hover{
+      background-color: #f3f3f3;
+      cursor: pointer;
+    }
+    
+    .contact {
+      width: 350px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    
+    .lastMsg {
+      color: #8b8b8b;
+    }
+    
+    .dateMsg {
+      font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    }
+    
+  }
+  
