@@ -17,7 +17,7 @@ export default class SendMessage extends React.Component{
     handleKeyPress = (e) => {
         if(e.charCode === 13 && this.state.sendingText.length !== 0){
 
-            this.props.updataMsgHistory(this.state.sendingText)
+            this.props.updateMsgHistory(this.state.sendingText)
 
             this.setState({
                 sendingText: ''
@@ -32,7 +32,7 @@ export default class SendMessage extends React.Component{
           return;
         };
 
-        this.props.updataMsgHistory(this.state.sendingText)
+        this.props.updateMsgHistory(this.state.sendingText)
 
         this.setState({
             sendingText: ''

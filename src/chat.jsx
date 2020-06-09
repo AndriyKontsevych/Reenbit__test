@@ -9,9 +9,8 @@ import Message from './components/message.jsx'
 export default class Chat extends React.Component {
     constructor(props){
         super(props);
+
         this.state = {
-            error: null,
-            isLoaded: false,
             serchingName: '',
             activeContactId: 1,
             contactsById: {...contactsById},
@@ -20,7 +19,6 @@ export default class Chat extends React.Component {
     }
 
     serchingContactName = ( name ) => {
-
         this.setState({
             serchingName: name
         })
@@ -32,7 +30,7 @@ export default class Chat extends React.Component {
         })
     }
 
-    updataMsgHistory = (msgText) => {
+    updateMsgHistory = (msgText) => {
         const messagesByContactId = {...this.state.messagesByContactId};
         const activeContactMsgs =  [...messagesByContactId[this.state.activeContactId]];
         const msgDate = new Date();
@@ -63,22 +61,17 @@ export default class Chat extends React.Component {
                     'time': msgDate.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})
                 });
 
-                if(contactsById[this.state.activeContactId].online === true) {
-
+                if (contactsById[this.state.activeContactId].online === true) {
                     messagesByContactId[this.state.activeContactId] = [...activeContactMsgs];
                 }
                 
                 this.setState({
-                  isLoaded: true,
                   messagesByContactId: {...messagesByContactId}
                 });
               },
 
               (error) => {
-                this.setState({
-                  isLoaded: true,
-                  error
-                });
+                console.error(error);
               }
             )
         });
@@ -91,13 +84,13 @@ export default class Chat extends React.Component {
 			  <div className="contactsBlock">
                 <div className="searchBar">
                     <div className="iconBox">
-                        < Avatar imgUrl={currentUser.icon_URL}/>
+                        <Avatar imgUrl={currentUser.icon_URL}/>
                         <div className="online">
                     </div>
                     </div>
 					<div className="inputSearch">
 						<div className="icon fas fa-search"></div>
-						< ContactSearch
+						<ContactSearch
                             serchingContactName={this.serchingContactName}
                         />
 					</div>
@@ -106,24 +99,26 @@ export default class Chat extends React.Component {
                     Chats
                 </div>
                 {
-                Object.keys(this.state.contactsById)
-                .filter((id) => {
-                    const contact = this.state.contactsById[id];
-                    
-                    return (contact.name).toLowerCase().includes(this.state.serchingName.toLowerCase())
-                })
-                .map( (id) => {
-                    const contact = this.state.contactsById[id];
-                    return (
-                        <Contact 
-                            contact={contact}
-                            messages={this.state.messagesByContactId[contact.id]}
-                            key={`contact-${contact.id}`}
-                            // onClick={this.setActiveContactId.bind(this, id)}
-                            onClick={() => this.setActiveContactId(id)}
-                        />
-                    );
-                })}
+                    Object.keys(this.state.contactsById)
+                    .filter((id) => {
+                        const contact = this.state.contactsById[id];
+                        
+                        return (contact.name).toLowerCase().includes(this.state.serchingName.toLowerCase())
+                    })
+                    .map( (id) => {
+                        const contact = this.state.contactsById[id];
+                        
+                        return (
+                            <Contact 
+                                contact={contact}
+                                messages={this.state.messagesByContactId[contact.id]}
+                                key={`contact-${contact.id}`}
+                                // onClick={this.setActiveContactId.bind(this, id)}
+                                onClick={() => this.setActiveContactId(id)}
+                            />
+                        );
+                    })
+                }
             </div>
                
 			   <div className="messagesBlock">
@@ -145,7 +140,7 @@ export default class Chat extends React.Component {
                 })}   
                 </div>
                 <SendMessage 
-                    updataMsgHistory={this.updataMsgHistory}
+                    updateMsgHistory={this.updateMsgHistory}
                 />
             </div>
           </div>
