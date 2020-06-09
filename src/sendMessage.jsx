@@ -8,11 +8,11 @@ export default class SendMessage extends React.Component{
         };
     }
 
-    handelChange = (event) => {
-        this.setState({
-            sendingText: event.target.value
-        });
-    };
+    // handelChange = (event) => {
+    //     this.setState({
+    //         sendingText: event.target.value
+    //     });
+    // };
 
     handleKeyPress = (e) => {
         console.log(e.keyCode)
@@ -53,7 +53,7 @@ export default class SendMessage extends React.Component{
                         placeholder="Type your message"
                         value={this.state.sendingText}
                         onChange={this.handelChange}
-                        onKeyPress={this.handleKeyPress}
+                        //onKeyPress={this.handleKeyPress}
                     >
                         
                     </input>
