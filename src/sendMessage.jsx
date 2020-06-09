@@ -8,27 +8,27 @@ export default class SendMessage extends React.Component{
         };
     }
 
-    // handelChange = (event) => {
-    //     this.setState({
-    //         sendingText: event.target.value
-    //     });
-    // };
+    handelChange = (event) => {
+        this.setState({
+            sendingText: event.target.value
+        });
+    };
 
-    handleKeyPress = (e) => {
-        console.log(e.keyCode)
-        e.preventDefault();
-        if(e.keyCode === 13){
+    // handleKeyPress = (e) => {
+    //     console.log(e.keyCode)
+    //     e.preventDefault();
+    //     if(e.keyCode === 13){
 
-            this.props.updataMsgHistory(this.state.sendingText)
+    //         this.props.updataMsgHistory(this.state.sendingText)
 
-            this.setState({
-                sendingText: ''
-            });
-        }
+    //         this.setState({
+    //             sendingText: ''
+    //         });
+    //     }
 
-        return;
+    //     return;
 
-    }
+    // }
 
     handleSubmit = (e) => {
         e.preventDefault();
