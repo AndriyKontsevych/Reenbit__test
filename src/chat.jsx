@@ -63,8 +63,11 @@ export default class Chat extends React.Component {
                     'time': msgDate.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})
                 });
 
-                messagesByContactId[this.state.activeContactId] = [...activeContactMsgs];
+                if(contactsById[this.state.activeContactId].online === true) {
 
+                    messagesByContactId[this.state.activeContactId] = [...activeContactMsgs];
+                }
+                
                 this.setState({
                   isLoaded: true,
                   messagesByContactId: {...messagesByContactId}
