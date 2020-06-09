@@ -3,7 +3,7 @@ export const contactsById = {
         "id": 1,
         "name": "Steven Rogers",
         "icon_URL": "https://image.flaticon.com/icons/png/128/892/892759.png",
-        "online": false
+        "online": true
     },
     2 : {
         "id": 2,
