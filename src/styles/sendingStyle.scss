@@ -1,0 +1,42 @@
+.sendingInputWrapper {
+    height: 120px;
+    background-color: #f3f3f3;
+    border-top: 1px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    .sendingInput {
+        height: 50px;
+        width: 90%;
+        max-width: 90%;
+        padding-left: 10px;
+        padding-right: 50px;
+        border: 1px solid #e0e0e0;
+        border-radius: 20px;
+        outline: none;
+        position: absolute;
+        font-size: 22px;
+      }
+      
+      .sendingBtn {
+        width: 35px;
+        height: 35px;
+        position: absolute;
+        right: 20px;
+        z-index: 1;
+        outline: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;  
+        cursor: pointer;
+      }
+      
+      .sendingBtn:hover {
+        border: 0;
+        border-radius: 15px;
+        background-color: #e6e6e6;
+      }
+
+  }
