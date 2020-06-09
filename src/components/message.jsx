@@ -1,6 +1,6 @@
 import React from 'react';
 import Avatar from './avatar.jsx'
-import { currentUser, contactsById } from './chatData.js';
+import { currentUser, contactsById } from '../chatData.js';
 
 export default function Message(props){console.log(props.message)
     if(props.message.contactId !== currentUser.id) 

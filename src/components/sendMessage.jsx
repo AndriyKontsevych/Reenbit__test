@@ -14,24 +14,20 @@ export default class SendMessage extends React.Component{
         });
     };
 
-    // handleKeyPress = (e) => {
-    //     console.log(e.keyCode)
-    //     e.preventDefault();
-    //     if(e.keyCode === 13){
+    handleKeyPress = (e) => {
+        if(e.charCode === 13){
 
-    //         this.props.updataMsgHistory(this.state.sendingText)
+            this.props.updataMsgHistory(this.state.sendingText)
 
-    //         this.setState({
-    //             sendingText: ''
-    //         });
-    //     }
+            this.setState({
+                sendingText: ''
+            });
+        }
 
-    //     return;
-
-    // }
+        return;
+    }
 
     handleSubmit = (e) => {
-        e.preventDefault();
         if (this.state.sendingText.length === 0) {
           return;
         };
@@ -53,7 +49,7 @@ export default class SendMessage extends React.Component{
                         placeholder="Type your message"
                         value={this.state.sendingText}
                         onChange={this.handelChange}
-                        //onKeyPress={this.handleKeyPress}
+                        onKeyPress={this.handleKeyPress}
                     >
                         
                     </input>

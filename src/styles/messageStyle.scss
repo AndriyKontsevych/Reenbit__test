@@ -1,6 +1,7 @@
 .msgContainer {
     display: flex;
     flex-direction: row;
+    max-width: 90%;
 }
 
 .incomingMsg {
@@ -17,6 +18,7 @@
             color: #fff;
             font-size: 18px;
             padding: 20px;
+            margin: 10px;
             border: solid;
             border-radius: 30px;
         }
@@ -29,7 +31,8 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    max-width: 90%;
+    padding-left: 20px;
+    padding-right: 20px;
 
     .answerMsgText {
         background-color: #adadad;

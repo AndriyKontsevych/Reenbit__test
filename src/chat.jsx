@@ -1,10 +1,10 @@
 import React from 'react';
 import {contactsById, messagesByContactId, currentUser } from './chatData.js';
-import Avatar from './avatar.jsx';
-import Contact from './contact.jsx';
-import ContactSearch from './contactSearch.jsx';
-import SendMessage from './sendMessage.jsx';
-import Message from './message.jsx'
+import Avatar from './components/avatar.jsx';
+import Contact from './components/contact.jsx';
+import ContactSearch from './components/contactSearch.jsx';
+import SendMessage from './components/sendMessage.jsx';
+import Message from './components/message.jsx'
 
 export default class Chat extends React.Component {
     constructor(props){
