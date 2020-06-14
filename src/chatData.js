@@ -81,9 +81,9 @@ export const messagesByContactId = {
       {'contactId': 2, 'msg': 'How are you?', 'date': '02.08.2020', 'time': '20:27'}
     ],
     3 : [
-      {'contactId': 2, 'msg': 'Hello there. Thanks for the follow. Did you notice, that I am an egg? A talking egg? Damn!', 'date': '02.08.2020', 'time': '21:20'},
+      {'contactId': 3, 'msg': 'Hello there. Thanks for the follow. Did you notice, that I am an egg? A talking egg? Damn!', 'date': '02.08.2020', 'time': '21:20'},
       {'contactId': 0, 'msg': 'Yeah that is crazy, but people can change their own picture and build their own Twitter conversation with this generator, so it does not matter that you are an egg', 'date': '02.08.2020', 'time': '21:25'},
-      {'contactId': 2, 'msg': 'Thanks mate! Feel way better now. Oh, and guys, these messages will be removed once your add your own :-)', 'date': '02.08.2020', 'time': '21:27'}
+      {'contactId': 3, 'msg': 'Thanks mate! Feel way better now. Oh, and guys, these messages will be removed once your add your own :-)', 'date': '02.08.2020', 'time': '21:27'}
     ],
     4 : [],
     5 : [],

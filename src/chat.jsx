@@ -98,9 +98,10 @@ export default class Chat extends React.Component {
                 <div className="chats">
                     Chats
                 </div>
-                {
+                { 
                     Object.keys(this.state.contactsById)
                     .filter((id) => {
+                        console.log(Object.keys(this.state.contactsById))
                         const contact = this.state.contactsById[id];
                         
                         return (contact.name).toLowerCase().includes(this.state.serchingName.toLowerCase())
