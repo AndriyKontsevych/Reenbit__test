@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Reenbit__test/static/css/main.8a4ab314.chunk.css",
-    "main.js": "/Reenbit__test/static/js/main.6d62b325.chunk.js",
-    "main.js.map": "/Reenbit__test/static/js/main.6d62b325.chunk.js.map",
+    "main.js": "/Reenbit__test/static/js/main.cd419f77.chunk.js",
+    "main.js.map": "/Reenbit__test/static/js/main.cd419f77.chunk.js.map",
     "runtime-main.js": "/Reenbit__test/static/js/runtime-main.ff3de3ca.js",
     "runtime-main.js.map": "/Reenbit__test/static/js/runtime-main.ff3de3ca.js.map",
     "static/js/2.b0277120.chunk.js": "/Reenbit__test/static/js/2.b0277120.chunk.js",
     "static/js/2.b0277120.chunk.js.map": "/Reenbit__test/static/js/2.b0277120.chunk.js.map",
     "index.html": "/Reenbit__test/index.html",
-    "precache-manifest.891052b07438ff250d025314d3cfeed4.js": "/Reenbit__test/precache-manifest.891052b07438ff250d025314d3cfeed4.js",
+    "precache-manifest.88816f2f21d23e734b33daa003be6785.js": "/Reenbit__test/precache-manifest.88816f2f21d23e734b33daa003be6785.js",
     "service-worker.js": "/Reenbit__test/service-worker.js",
     "static/css/main.8a4ab314.chunk.css.map": "/Reenbit__test/static/css/main.8a4ab314.chunk.css.map",
     "static/js/2.b0277120.chunk.js.LICENSE.txt": "/Reenbit__test/static/js/2.b0277120.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.ff3de3ca.js",
     "static/js/2.b0277120.chunk.js",
     "static/css/main.8a4ab314.chunk.css",
-    "static/js/main.6d62b325.chunk.js"
+    "static/js/main.cd419f77.chunk.js"
   ]
 }
